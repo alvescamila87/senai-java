@@ -45,5 +45,24 @@ public class Livro {
         this.estaEmprestado = estaEmprestado;
     }
 
+    public boolean emprestarLivro(){
+        if(estaEmprestado){
+            System.out.println("Esse livro já está emprestado!");
+            return false;
+        } else {
+            estaEmprestado = true;
+            System.out.println("Empréstimo realizado com sucesso!");
+            return true;
+        }
+    }
+
+    public void imprimirInformacoes() {
+        System.out.println("INFORMAÇÕES DO LIVRO: "
+                + " \nTítulo: " + titulo
+                + " \nAutor: " + autor
+                + " \nAno de publicação: " + anoPublicacao
+                + " \nEstá emprestado: " + estaEmprestado);
+    }
+
 
 }
