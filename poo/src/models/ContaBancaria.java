@@ -47,8 +47,8 @@ public class ContaBancaria {
         return true;
     }
 
-    public String imprimirExtrato(){
-        return "CONTA BANCÁRIA: " + "\n[Nome titular: " + nomeTitular + " \nNúmero da conta: " + numeroConta + " \nSaldo: R$" + saldo + "]";
+    public void imprimirExtrato(){
+        System.out.println("CONTA BANCÁRIA: " + "\n[Nome titular: " + nomeTitular + " \nNúmero da conta: " + numeroConta + " \nSaldo: R$" + saldo + "]");
     }
 
 }

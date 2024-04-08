@@ -10,6 +10,6 @@ public class TesteContaBancaria {
         conta01.sacar(101);
         System.out.println(conta01.getSaldo());
 
-        System.out.println(conta01.imprimirExtrato());
+        conta01.imprimirExtrato();
     }
 }
