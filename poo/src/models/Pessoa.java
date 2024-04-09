@@ -1,5 +1,8 @@
 package models;
 
+/**
+ * Representa uma pessoa com nome, idade e altura.
+ */
 public class Pessoa {
 
     private String nome;

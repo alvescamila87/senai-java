@@ -1,44 +1,29 @@
 package models;
 
-public class Carro {
+import java.security.PublicKey;
 
-    // Atributos
+public class Carro extends Veiculo {
 
-    private String cor;
-    private String marca;
-    private int velocidadeMaxima;
+    private int numeroPortas;
 
-    // Métodos
-
-    public void acelerar(){
-        System.out.println("O carro está acelerando.");
+    public Carro(String marca, String modelo, int ano, int numeroPortas) {
+        super(marca, modelo, ano);
+        this.numeroPortas = numeroPortas;
     }
 
-    public void frear() {
-        System.out.println("O carro está freando.");
+    public int getNumeroPortas(){
+        return numeroPortas;
     }
 
-    public String getCor(){
-        return cor;
+    public void setNumeroPortas(int numeroPortas){
+        this.numeroPortas = numeroPortas;
     }
-
-    public String getMarca(){
-        return marca;
-    }
-
-    public int getVelocidadeMaxima(){
-        return velocidadeMaxima;
-    }
-
-    public void setCor(String cor){
-        this.cor = cor;
-    }
-
-    public void setMarca(String marca){
-        this.marca = marca;
-    }
-
-    public void setVelocidadeMaxima(int velocidadeMaxima){
-        this.velocidadeMaxima = velocidadeMaxima;
+    @Override
+    public void display() {
+        System.out.println("INFORMAÇÕES DE CARRO: "
+                + " \nMarca: " + getMarca()
+                + " \nModelo: " + getModelo()
+                + " \nAno fabricação: " + getAno()
+                + " \nNúmero de portas: " + getNumeroPortas());
     }
 }

@@ -1,7 +1,6 @@
-import models.Carro;
-import models.Pessoa;
+import models.CarroBasico;
 
-public class TesteCarro {
+public class TesteCarroBasico {
     public static void main(String[] args) {
 
         /*
@@ -21,7 +20,7 @@ public class TesteCarro {
 
          */
 
-        Carro carro2 = new Carro();
+        CarroBasico carro2 = new CarroBasico();
         carro2.setCor("Branco");
         carro2.setMarca("VW");
         carro2.setVelocidadeMaxima(220);

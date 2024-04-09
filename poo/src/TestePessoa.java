@@ -1,4 +1,3 @@
-import models.Carro;
 import models.Pessoa;
 
 public class TestePessoa {
@@ -9,10 +8,22 @@ public class TestePessoa {
         pessoa1.setIdade(36);
         pessoa1.setAltura(1.60);
 
+        Pessoa pessoa2 = new Pessoa();
+        pessoa2.setNome("Zebedeu");
+        pessoa2.setIdade(33);
+        pessoa2.setAltura(1.87);
+
         System.out.println();
-        System.out.println("Informações de PESSOA");
+        System.out.println("Informações de PESSOA 01");
         System.out.println("Nome: " + pessoa1.getNome());
         System.out.println("Idade: " + pessoa1.getIdade() + "anos.");
         System.out.printf("Altura: " + pessoa1.getAltura());
+
+        System.out.println();
+        System.out.println("Informações de PESSOA 01");
+        System.out.println("Nome: " + pessoa2.getNome());
+        System.out.println("Idade: " + pessoa2.getIdade() + "anos.");
+        System.out.printf("Altura: " + pessoa2.getAltura());
+
     }
 }
