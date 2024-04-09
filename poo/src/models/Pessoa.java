@@ -43,6 +43,9 @@ public class Pessoa {
         this.altura = altura;
     }
 
+    /**
+     * Imprime uma mensagem de saudação no console.
+     */
     public void falar(){
         System.out.printf("Olá, meu nome é %s e tenho %. \n", nome, idade);
     }
