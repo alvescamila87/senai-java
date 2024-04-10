@@ -7,7 +7,7 @@ import java.beans.PropertyEditorSupport;
  */
 public class Calculadora {
 
-    public double adiciona(double num1, double num2){
+    public double soma(double num1, double num2){
         double resultado = num1 + num2;
         return resultado;
     }

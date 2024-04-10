@@ -42,5 +42,9 @@ public abstract class Veiculo {
         this.ano = ano;
     }
 
+    protected void exibirCategoria(){
+
+    }
+
 
 }
