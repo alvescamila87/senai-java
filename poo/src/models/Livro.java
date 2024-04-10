@@ -49,6 +49,9 @@ public class Livro {
         this.estaEmprestado = estaEmprestado;
     }
 
+    /**
+     * Permite pegar o livro emprestado da biblioteca, checando se já está ou não emprestado.
+     */
     public boolean emprestarLivro(){
         if(estaEmprestado){
             System.out.println("Esse livro já está emprestado!");
@@ -57,6 +60,20 @@ public class Livro {
             estaEmprestado = true;
             System.out.println("Empréstimo realizado com sucesso!");
             return true;
+        }
+    }
+
+    /**
+     * Permite devolver livro emprestado da biblioteca, checando se está ou não emprestado.
+     */
+    public boolean devolverLivro(){
+        if(!estaEmprestado) {
+            estaEmprestado = false;
+            System.out.println("Devolução de livro realizada com sucesso!");
+            return true;
+        } else {
+            System.out.println("Esse livro está emprestado!");
+            return false;
         }
     }
 
