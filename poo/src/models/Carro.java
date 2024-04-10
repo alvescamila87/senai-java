@@ -1,7 +1,8 @@
 package models;
 
-import java.security.PublicKey;
-
+/**
+ *   Carro é um veículo que permite especificar ainda o 'número de portas' por tipo.
+ */
 public class Carro extends Veiculo {
 
     private int numeroPortas;
@@ -18,6 +19,10 @@ public class Carro extends Veiculo {
     public void setNumeroPortas(int numeroPortas){
         this.numeroPortas = numeroPortas;
     }
+
+    /**
+     * Exibe as informações do carro, considerando marca, modelo, ano de fabricação e número de portas.
+     */
     @Override
     public void display() {
         System.out.println("INFORMAÇÕES DE CARRO: "

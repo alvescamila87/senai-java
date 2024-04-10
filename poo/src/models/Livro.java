@@ -1,5 +1,9 @@
 package models;
 
+/**
+ * Livro que solicita informações relacionado ao empréstimo de livro na Biblioteca, como título, autor,
+ * ano de publicação e se está emprestado.
+ */
 public class Livro {
 
     private String titulo;
@@ -56,6 +60,10 @@ public class Livro {
         }
     }
 
+    /**
+     * Exibe as informações relacionado ao livro da biblioteca, como título, autor, ano de publicação
+     * e se está emprestado.
+     */
     public void imprimirInformacoes() {
         System.out.println("INFORMAÇÕES DO LIVRO: "
                 + " \nTítulo: " + titulo

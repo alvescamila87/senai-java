@@ -1,5 +1,7 @@
 package models;
-
+/**
+ * Conta bancária que solicita informações relacionadas ao titular, número da conta e saldo em banco.
+ */
 public class ContaBancaria {
 
     private String nomeTitular;
@@ -47,6 +49,9 @@ public class ContaBancaria {
         return true;
     }
 
+    /**
+     * Imprime o extrato bancário do titular, exibindo informações de número da conta e saldo.
+     */
     public void imprimirExtrato(){
         System.out.println("CONTA BANCÁRIA: " + "\n[Nome titular: " + nomeTitular + " \nNúmero da conta: " + numeroConta + " \nSaldo: R$" + saldo + "]");
     }

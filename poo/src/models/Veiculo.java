@@ -1,7 +1,8 @@
 package models;
 
-import com.sun.source.doctree.SinceTree;
-
+/**
+ *   Classe abstrata de veículo para abranger os mais variados tipos de veículos (caso houver herança);
+ */
 public abstract class Veiculo {
 
     private String marca;

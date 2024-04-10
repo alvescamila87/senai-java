@@ -2,6 +2,9 @@ package models;
 
 import java.beans.PropertyEditorSupport;
 
+/**
+ *   Calculadora com as operações: adição, subtração, multiplicação e divisão com double.
+ */
 public class Calculadora {
 
     public double adiciona(double num1, double num2){
