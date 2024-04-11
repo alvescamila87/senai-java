@@ -1,28 +1,26 @@
 package models;
 
-import java.beans.PropertyEditorSupport;
-
 /**
  *   Calculadora com as operações: adição, subtração, multiplicação e divisão com double.
  */
 public class Calculadora {
 
-    public double soma(double num1, double num2){
+    public double somar(double num1, double num2){
         double resultado = num1 + num2;
         return resultado;
     }
 
-    public double subtrai(double num1, double num2) {
+    public double subtrair(double num1, double num2) {
         double resultado = num1 - num2;
         return resultado;
     }
 
-    public double multiplica(double num1, double num2){
+    public double multiplicar(double num1, double num2){
         double resultado = num1 * num2;
         return resultado;
     }
 
-    public double divide(double num1, double num2){
+    public double dividir(double num1, double num2){
         double resultado = 0.0;
 
         if(num2 == 0){

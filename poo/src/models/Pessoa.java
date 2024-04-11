@@ -9,15 +9,23 @@ public class Pessoa {
     private int idade;
     private double altura;
 
+    private String nacionalidade;
+
     public Pessoa(){
     }
-
 
     public Pessoa(String nome, int idade, double altura){
         this.nome = nome;
         this.idade = idade;
         this.altura = altura;
     }
+
+    public Pessoa(String nome, String nacionalidade){
+        this.nome = "Desconhecido";
+        this.nacionalidade = "Não especificada";
+    }
+
+
 
     public String getNome(){
         return nome;
@@ -29,6 +37,10 @@ public class Pessoa {
 
     public double getAltura(){
         return altura;
+    }
+
+    public String getNacionalidade(){
+        return nacionalidade;
     }
 
     public void setNome(String nome){
@@ -43,10 +55,15 @@ public class Pessoa {
         this.altura = altura;
     }
 
+    public void setNacionalidade(String nacionalidade){
+        this.nacionalidade = nacionalidade;
+    }
+
     /**
      * Imprime uma mensagem de saudação no console.
      */
     public void falar(){
         System.out.printf("Olá, meu nome é %s e tenho %. \n", nome, idade);
     }
+
 }

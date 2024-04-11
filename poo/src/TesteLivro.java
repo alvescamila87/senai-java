@@ -18,5 +18,12 @@ public class TesteLivro {
 
         livro02.imprimirInformacoes();
 
+        // Teste novo construtor
+        System.out.println("LIVR0 03");
+        Livro livro03 = new Livro("Java Fundamentals", "Brian May");
+        livro03.devolverLivro();
+        livro03.emprestarLivro();
+        System.out.println("Ano de publicação padrão: " + livro03.getAnoPublicacao());
+
     }
 }

@@ -8,7 +8,7 @@ public class Livro {
 
     private String titulo;
     private String autor;
-    private int anoPublicacao;
+    private int anoPublicacao = 0;
     boolean estaEmprestado = false;
 
     public Livro(String titulo, String autor, int anoPublicacao){
@@ -17,19 +17,24 @@ public class Livro {
         this.anoPublicacao = anoPublicacao;
     }
 
-    public String getTitulo(String titulo){
+    public Livro(String titulo, String autor){
+        this.titulo = titulo;
+        this.autor = autor;
+    }
+
+    public String getTitulo(){
         return titulo;
     }
 
-    public String getAutor(String autor){
+    public String getAutor(){
         return autor;
     }
 
-    public int getAnoPublicacao(int anoPublicacao){
+    public int getAnoPublicacao(){
         return anoPublicacao;
     }
 
-    public boolean isEstaEmprestado(boolean estaEmprestado){
+    public boolean isEstaEmprestado(){
         return estaEmprestado;
     }
 
@@ -67,7 +72,7 @@ public class Livro {
      * Permite devolver livro emprestado da biblioteca, checando se está ou não emprestado.
      */
     public boolean devolverLivro(){
-        if(!estaEmprestado) {
+        if(estaEmprestado) {
             estaEmprestado = false;
             System.out.println("Devolução de livro realizada com sucesso!");
             return true;

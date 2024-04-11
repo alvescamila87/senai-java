@@ -25,5 +25,14 @@ public class TestePessoa {
         System.out.println("Idade: " + pessoa2.getIdade() + "anos.");
         System.out.printf("Altura: " + pessoa2.getAltura());
 
+        // Construtor inicializado
+        Pessoa pessoa3 = new Pessoa();
+        System.out.println();
+        System.out.println("Informações de PESSOA 03");
+        System.out.println("Nome: " + pessoa3.getNome());
+        System.out.println("Idade: " + pessoa3.getIdade());
+        System.out.println("Nacionalidade: " + pessoa3.getIdade());
+
+
     }
 }
