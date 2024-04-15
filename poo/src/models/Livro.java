@@ -77,7 +77,7 @@ public class Livro {
             System.out.println("Devolução de livro realizada com sucesso!");
             return true;
         } else {
-            System.out.println("Esse livro está emprestado!");
+            System.out.println("Esse livro está disponível para empréstimo!");
             return false;
         }
     }

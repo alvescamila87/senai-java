@@ -24,7 +24,7 @@ public class Calculadora {
         double resultado = 0.0;
 
         if(num2 == 0){
-            System.out.println("ERRO: Não é possível realizar divisão por ZERO!");
+            System.err.println("ERRO: Não é possível realizar divisão por ZERO!");
             return resultado = 0.0;
         } else {
             return resultado = num1 / num2;
