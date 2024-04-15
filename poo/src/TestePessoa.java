@@ -16,22 +16,24 @@ public class TestePessoa {
         System.out.println();
         System.out.println("Informações de PESSOA 01");
         System.out.println("Nome: " + pessoa1.getNome());
-        System.out.println("Idade: " + pessoa1.getIdade() + "anos.");
+        System.out.println("Idade: " + pessoa1.getIdade() + " anos.");
         System.out.printf("Altura: " + pessoa1.getAltura());
 
         System.out.println();
-        System.out.println("Informações de PESSOA 01");
+        System.out.println("Informações de PESSOA 02");
         System.out.println("Nome: " + pessoa2.getNome());
-        System.out.println("Idade: " + pessoa2.getIdade() + "anos.");
+        System.out.println("Idade: " + pessoa2.getIdade() + " anos.");
         System.out.printf("Altura: " + pessoa2.getAltura());
 
-        // Construtor inicializado
+        // Construtor inicializado + imprimir propriedades (Ex 03)
         Pessoa pessoa3 = new Pessoa();
+        /*
         System.out.println();
         System.out.println("Informações de PESSOA 03");
         System.out.println("Nome: " + pessoa3.getNome());
         System.out.println("Idade: " + pessoa3.getIdade());
-        System.out.println("Nacionalidade: " + pessoa3.getIdade());
+        System.out.println("Nacionalidade: " + pessoa3.getNacionalidade());
+        */
 
 
     }

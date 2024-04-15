@@ -11,6 +11,13 @@ public class ContaBancaria {
     public ContaBancaria(String nomeTitular, String numeroConta){
         this.nomeTitular = nomeTitular;
         this.numeroConta = numeroConta;
+        this.saldo = 0.0;
+    }
+
+    // Construtor THIS();
+    public ContaBancaria(String nomeTitular, String numeroConta, double saldo){
+        this(nomeTitular, numeroConta);
+        this.saldo = saldo;
     }
 
     public String getNomeTitular(){

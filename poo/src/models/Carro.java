@@ -6,10 +6,18 @@ package models;
 public class Carro extends Veiculo {
 
     private int numeroPortas;
+    private String cor;
 
-    public Carro(String marca, String modelo, int ano, int numeroPortas) {
+    public Carro(String marca, String modelo, int ano) {
         super(marca, modelo, ano);
         this.numeroPortas = numeroPortas;
+        this.cor = cor;
+    }
+
+    public Carro(String marca, String modelo, int ano, int numeroPortas, String cor){
+        this(marca, modelo, ano);
+        this.numeroPortas = numeroPortas;
+        this.cor = cor;
     }
 
     public int getNumeroPortas(){
@@ -18,6 +26,14 @@ public class Carro extends Veiculo {
 
     public void setNumeroPortas(int numeroPortas){
         this.numeroPortas = numeroPortas;
+    }
+
+    public String getCor(){
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
     }
 
     /**
@@ -29,6 +45,7 @@ public class Carro extends Veiculo {
                 + " \nMarca: " + getMarca()
                 + " \nModelo: " + getModelo()
                 + " \nAno fabricação: " + getAno()
+                + " \nCor: " + getCor()
                 + " \nNúmero de portas: " + getNumeroPortas());
     }
 }

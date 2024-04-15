@@ -11,21 +11,25 @@ public class Pessoa {
 
     private String nacionalidade;
 
+    // Construtor com valores padrões
     public Pessoa(){
+        this.nome = "Desconhecido";
+        this.nacionalidade = "Não especificada";
+        this.idade = 0;
+
+        // Imprimir propriedades
+        System.out.println("\nINFORMAÇÕES DA PESSOA:");
+        System.out.println("Nome: " + getNome());
+        System.out.println("Nacionalidade: " + getNacionalidade());
+        System.out.println("Idade: " + getIdade() + " anos");
     }
 
-    public Pessoa(String nome, int idade, double altura){
+    public Pessoa(String nome, int idade, double altura, String nacionalidade){
         this.nome = nome;
         this.idade = idade;
         this.altura = altura;
+        this.nacionalidade = nacionalidade;
     }
-
-    public Pessoa(String nome, String nacionalidade){
-        this.nome = "Desconhecido";
-        this.nacionalidade = "Não especificada";
-    }
-
-
 
     public String getNome(){
         return nome;

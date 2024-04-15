@@ -8,7 +8,7 @@ public class Livro {
 
     private String titulo;
     private String autor;
-    private int anoPublicacao = 0;
+    private int anoPublicacao;
     boolean estaEmprestado = false;
 
     public Livro(String titulo, String autor, int anoPublicacao){
