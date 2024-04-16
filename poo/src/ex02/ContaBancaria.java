@@ -12,7 +12,25 @@ public class ContaBancaria {
         this.saldo = 0.0;
     }
 
+    public String getNumeroDaConta(){
+        return numeroDaConta;
+    }
 
+    public String getNomeDoTitular(){
+        return nomeDoTitular;
+    }
+
+    public double getSaldo(){
+        return saldo;
+    }
+
+    public void setNumeroDaConta(String numeroDaConta) {
+        this.numeroDaConta = numeroDaConta;
+    }
+
+    public void setNomeDoTitular(String nomeDoTitular){
+        this.nomeDoTitular = nomeDoTitular;
+    }
 
     public void depositar(double valor){
         this.saldo += valor;
@@ -21,16 +39,16 @@ public class ContaBancaria {
 
     public void sacar(double valor){
         if(valor > this.saldo){
-            System.err.println("Saque não permitido, saldo insuficiente!");
+            System.out.println("Saque não permitido, saldo insuficiente!");
         } else {
             this.saldo -= valor;
-            System.out.println("Saque realizado com sucesso!");
+            System.err.println("ERRO: Saque realizado com sucesso!");
         }
     }
 
     public void imprimirExtrato(){
         System.out.println("\nEXTRATO BANCÁRIO");
         System.out.println("--------------------------");
-        System.out.println("Nome: ") + ;
+        System.out.println("Nome: " + getNomeDoTitular() + "\nNúmero conta bancária: " + getNumeroDaConta() + "\nSaldo R$: " + getSaldo());
     }
 }
