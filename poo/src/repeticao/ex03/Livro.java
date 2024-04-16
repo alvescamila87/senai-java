@@ -1,4 +1,4 @@
-package ex03;
+package repeticao.ex03;
 
 public class Livro {
     private String titulo;

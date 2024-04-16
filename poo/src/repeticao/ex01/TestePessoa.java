@@ -1,4 +1,4 @@
-package ex01;
+package repeticao.ex01;
 
 public class TestePessoa {
     public static void main(String[] args) {

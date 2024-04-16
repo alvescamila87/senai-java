@@ -1,4 +1,4 @@
-package ex05;
+package repeticao.ex05;
 
 public class Carro extends Veiculo{
 

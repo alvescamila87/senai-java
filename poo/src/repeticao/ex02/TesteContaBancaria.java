@@ -1,4 +1,4 @@
-package ex02;
+package repeticao.ex02;
 
 public class TesteContaBancaria {
 

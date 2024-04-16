@@ -1,4 +1,4 @@
-package ex05;
+package repeticao.ex05;
 
 public abstract class Veiculo {
     private String marca;

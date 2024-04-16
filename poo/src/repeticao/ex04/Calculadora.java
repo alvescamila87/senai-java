@@ -1,4 +1,4 @@
-package ex04;
+package repeticao.ex04;
 
 public class Calculadora {
 
