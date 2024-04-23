@@ -43,17 +43,33 @@ public class Main {
                     gu.adicionarUsuario(usuario);
 
                     break;
-                case 2: // metodo Listar todos os usuários;
-                    System.out.println("metodo Listar todos os usuários");
+                case 2: // Método Listar todos os usuários;
+                    gu.obterTodosUsuarios();
+
                     break;
-                case 3: // metodo Buscar usuário por ID;
-                    System.out.println("metodo Buscar usuário por ID");
+                case 3: // Método Buscar usuário por ID;
+                    System.out.println("Informe o ID do usuário: ");
+                    String idUsuario = entrada.next();
+
+                    gu.obterUsuarioPorId(idUsuario);
                     break;
-                case 4: // metodo Atualizar dados de usuário;
-                    System.out.println("metodo Atualizar dados de usuário"); ;
+                case 4: // Método Atualizar dados de usuário;
+                    System.out.println("ID: ");
+                    String idAtualizar = entrada.next();
+
+                    System.out.println("Nome: ");
+                    String nomeAtualizar = entrada.next();
+
+                    System.out.println("Email: ");
+                    String emailAtualizar = entrada.next();
+
+                    gu.atualizarUsuario(idAtualizar, nomeAtualizar, emailAtualizar);
                     break;
-                case 5: // metodo Remover usuário por ID;
-                    System.out.println("metodo Remover usuário por ID"); ;
+                case 5: // Método Remover usuário por ID;
+                    System.out.println("Informe o ID do usuário a ser removido: ");
+                    String idUsuarioRemover = entrada.next();
+
+                    gu.removerUsuario(idUsuarioRemover);
                     break;
                 case 6: // Sair do programa
                     System.out.println("FIM DE PROGRAMA");
