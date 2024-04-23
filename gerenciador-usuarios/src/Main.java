@@ -1,3 +1,6 @@
+import models.GerenciadorUsuario;
+import models.Usuario;
+
 import java.util.Scanner;
 
 public class Main {
@@ -5,9 +8,12 @@ public class Main {
 
         Scanner entrada = new Scanner(System.in);
 
+        GerenciadorUsuario gu = new GerenciadorUsuario();
+
         int opcao = 0;
 
         while (opcao != 6){
+
             System.out.println("""
                     ------------- MENU -------------
                     [1] Adicionar usuário 
@@ -23,14 +29,25 @@ public class Main {
             opcao = entrada.nextInt();
 
             switch (opcao) {
-                case 1: // metodo adicionar usuario;
-                    System.out.println("metodo Adicionar usuario"); ;
+                case 1: // Método adicionar usuário;
+                    System.out.println("ID: ");
+                    String idEntrada = entrada.next();
+
+                    System.out.println("Nome: ");
+                    String nomeEntrada = entrada.next();
+
+                    System.out.println("Email: ");
+                    String emailEntrada = entrada.next();
+
+                    Usuario usuario = new Usuario(idEntrada, nomeEntrada, emailEntrada);
+                    gu.adicionarUsuario(usuario);
+
                     break;
                 case 2: // metodo Listar todos os usuários;
-                    System.out.println("metodo Listar todos os usuários"); ;
+                    System.out.println("metodo Listar todos os usuários");
                     break;
                 case 3: // metodo Buscar usuário por ID;
-                    System.out.println("metodo Buscar usuário por ID"); ;
+                    System.out.println("metodo Buscar usuário por ID");
                     break;
                 case 4: // metodo Atualizar dados de usuário;
                     System.out.println("metodo Atualizar dados de usuário"); ;
@@ -47,7 +64,6 @@ public class Main {
             }
 
         }
-
 
     }
 

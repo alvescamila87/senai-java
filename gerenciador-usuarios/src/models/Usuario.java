@@ -1,5 +1,6 @@
 package models;
 
+
 public class Usuario {
 
     private String id;
@@ -44,4 +45,5 @@ public class Usuario {
                 ", email = '" + email + '\'' +
                 '}';
     }
+
 }

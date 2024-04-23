@@ -7,17 +7,27 @@ public class GerenciadorUsuario {
 
     private List<Usuario> usuario = new ArrayList<>();
 
-    public void adicionaUsuario(Usuario usuario){
-        // adicionar usuário;
+    public GerenciadorUsuario() {
+    }
+
+    public void adicionarUsuario(Usuario usuario){
+        if(!usuario.equals(null)){
+            setUsuario(usuario);
+            System.out.println("Usuário adicionado com sucesso!");
+        } else {
+            System.out.println("[ERRO]: Usuário inválido / null...");
+        }
     }
 
     public List<Usuario> obterTodosUsuarios(){
-        // retornar todos os usuários
+        getUsuario();
         return usuario;
     }
 
     public List<Usuario> obterUsuarioPorId(String id){
-        // retornar usuário por id
+        if(id.equals(id)){
+
+        }
         return usuario;
     }
 
@@ -35,5 +45,13 @@ public class GerenciadorUsuario {
         return "GerenciadorUsuario {" +
                 "usuario =" + usuario +
                 '}';
+    }
+
+    public List<Usuario> getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario.add(usuario);
     }
 }
