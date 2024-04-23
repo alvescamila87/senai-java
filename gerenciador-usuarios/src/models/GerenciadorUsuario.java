@@ -39,27 +39,39 @@ public class GerenciadorUsuario {
         return null;
     }
 
-    public void atualizarUsuario(String id, String novoNome, String novoEmail){
+    public boolean atualizarUsuario(String id, String novoNome, String novoEmail){
+        boolean usuarioAtualizado = false;
+
         for(Usuario usuario : usuarios) {
             if(usuario.getId().equals(id)) {
                 usuario.setNome(novoNome);
                 usuario.setEmail(novoEmail);
                 System.out.println("Usuário atualizado com sucesso!");
+                usuarioAtualizado = true;
+                return usuarioAtualizado;
             } else {
                 System.out.println("Usuário NÃO encontrado...");
+                return false;
             }
         }
+        return usuarioAtualizado;
     }
 
-    public void removerUsuario(String id){
+    public boolean removerUsuario(String id){
+        boolean usuarioAtualizado = false;
+
         for(Usuario usuario : usuarios) {
             if(usuario.getId().equals(id)) {
                 this.usuarios.remove(Integer.parseInt(id));
                 System.out.println("Usuário removido com sucesso!");
+                usuarioAtualizado = true;
+                return usuarioAtualizado;
             } else {
                 System.out.println("Usuário NÃO encontrado...");
+                return false;
             }
         }
+        return usuarioAtualizado;
     }
 
 }
