@@ -49,28 +49,28 @@ public class Main {
                     break;
                 case 3: // Método Buscar usuário por ID;
                     System.out.println("Informe o ID do usuário a ser pesquisado: ");
-                    String idUsuarioPesquisado = entrada.next();
+                    String consultaIdUsuarioBusca = entrada.next();
 
-                    int posicaoUsuarioPesquisado = gu.obterUsuarioPorId(gu.obterTodosUsuarios(), idUsuarioPesquisado);
+                    int posicaoUsuarioPesquisado = gu.obterUsuarioPorId(gu.obterTodosUsuarios(), consultaIdUsuarioBusca);
 
                     break;
                 case 4: // Método Atualizar dados de usuário;
                     System.out.println("ID: ");
-                    String idAtualizar = entrada.next();
+                    String consultaIdUsuarioAtualizacao = entrada.next();
 
                     System.out.println("Nome: ");
-                    String nomeAtualizar = entrada.next();
+                    String novoNome = entrada.next();
 
                     System.out.println("Email: ");
-                    String emailAtualizar = entrada.next();
+                    String novoEmail = entrada.next();
 
-                    gu.atualizarUsuario(idAtualizar, nomeAtualizar, emailAtualizar);
+                    gu.atualizarUsuario(gu.obterTodosUsuarios(), consultaIdUsuarioAtualizacao, novoNome, novoEmail);
                     break;
                 case 5: // Método Remover usuário por ID;
                     System.out.println("Informe o ID do usuário a ser removido: ");
-                    String idUsuarioRemover = entrada.next();
+                    String consultaIdUsuarioRemocao = entrada.next();
 
-                    int posicaoUsuarioRemovido = gu.removerUsuario(gu.obterTodosUsuarios(), idUsuarioRemover);
+                    int posicaoUsuarioRemovido = gu.removerUsuario(gu.obterTodosUsuarios(), consultaIdUsuarioRemocao);
                     break;
                 case 6: // Sair do programa
                     System.out.println("FIM DE PROGRAMA");

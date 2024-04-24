@@ -28,20 +28,6 @@ public class GerenciadorUsuario {
         return usuarios;
     }
 
-    /*
-    public Usuario obterUsuarioPorId(String id){
-
-        for(Usuario usuario : usuarios) {
-            if(usuario.getId().equals(id)) {
-                System.out.println(usuario.toString());
-                return usuario;
-            }
-        }
-        System.out.println("Usuário NÃO encontrado...");
-        return null;
-    }
-     */
-
     public int obterUsuarioPorId(List<Usuario> listaUsuarios, String id){
         for (int i = 0; i < listaUsuarios.size(); i++) {
             if(listaUsuarios.get(i).getId().equals(id)) {
@@ -57,22 +43,17 @@ public class GerenciadorUsuario {
         return -1;
     }
 
-    public boolean atualizarUsuario(String id, String novoNome, String novoEmail){
-        boolean usuarioAtualizado = false;
-
-        for(Usuario usuario : usuarios) {
-            if(usuario.getId().equals(id)) {
+    public void atualizarUsuario(List<Usuario> listaUsuarios, String id, String novoNome, String novoEmail){
+        for(Usuario usuario : listaUsuarios){
+            if(usuario.getId().equals(id)){
                 usuario.setNome(novoNome);
                 usuario.setEmail(novoEmail);
-                System.out.println("Usuário atualizado com sucesso!");
-                usuarioAtualizado = true;
-                return usuarioAtualizado;
-            } else {
-                System.out.println("Usuário NÃO encontrado...");
-                return false;
+                System.out.println("Usuário atualizado com sucesso");
+                return;
             }
         }
-        return usuarioAtualizado;
+        System.out.println("ID: " + id + " não encontrado!");
+        return;
     }
 
     public int removerUsuario(List<Usuario> listaUsuarios, String id){
