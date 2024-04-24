@@ -48,10 +48,11 @@ public class Main {
 
                     break;
                 case 3: // Método Buscar usuário por ID;
-                    System.out.println("Informe o ID do usuário: ");
-                    String idUsuario = entrada.next();
+                    System.out.println("Informe o ID do usuário a ser pesquisado: ");
+                    String idUsuarioPesquisado = entrada.next();
 
-                    gu.obterUsuarioPorId(idUsuario);
+                    int posicaoUsuarioPesquisado = gu.obterUsuarioPorId(gu.obterTodosUsuarios(), idUsuarioPesquisado);
+
                     break;
                 case 4: // Método Atualizar dados de usuário;
                     System.out.println("ID: ");
@@ -69,7 +70,7 @@ public class Main {
                     System.out.println("Informe o ID do usuário a ser removido: ");
                     String idUsuarioRemover = entrada.next();
 
-                    gu.removerUsuario(idUsuarioRemover);
+                    int posicaoUsuarioRemovido = gu.removerUsuario(gu.obterTodosUsuarios(), idUsuarioRemover);
                     break;
                 case 6: // Sair do programa
                     System.out.println("FIM DE PROGRAMA");
