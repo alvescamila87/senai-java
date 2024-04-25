@@ -1,5 +1,8 @@
 package models;
 
+/**
+ * Representa um usuário de sistema;
+ */
 
 public class Usuario {
 

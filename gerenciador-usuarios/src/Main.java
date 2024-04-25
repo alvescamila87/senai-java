@@ -39,8 +39,8 @@ public class Main {
                     System.out.println("Email: ");
                     String emailEntrada = entrada.next();
 
-                    Usuario usuario = new Usuario(idEntrada, nomeEntrada, emailEntrada);
-                    gu.adicionarUsuario(usuario);
+                    Usuario novoUsuario = new Usuario(idEntrada, nomeEntrada, emailEntrada);
+                    gu.adicionarUsuario(novoUsuario);
 
                     break;
                 case 2: // Método Listar todos os usuários;
