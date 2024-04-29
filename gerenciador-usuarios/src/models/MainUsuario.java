@@ -1,9 +1,8 @@
-import models.GerenciadorUsuario;
-import models.Usuario;
+package models;
 
 import java.util.Scanner;
 
-public class Main {
+public class MainUsuario {
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
