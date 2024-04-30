@@ -1,8 +1,9 @@
-package models;
+import model.ex01.GerenciadorUsuario;
+import model.ex01.Usuario;
 
 import java.util.Scanner;
 
-public class MainUsuario {
+public class TesteUsuario {
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);

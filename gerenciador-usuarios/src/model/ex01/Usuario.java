@@ -1,4 +1,4 @@
-package models;
+package model.ex01;
 
 /**
  * Representa um usuário de sistema;

@@ -13,7 +13,6 @@ public class GerenciadorUsuario {
     public boolean adicionarUsuario(Usuario usuario){
         for (Usuario u : listaDeUsuarios){
             if (u.getId().equals(usuario.getId())) {
-                System.out.println("ID: " + usuario.getId() + " já existente.");
                 return false;
             }
         }

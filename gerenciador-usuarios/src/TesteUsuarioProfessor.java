@@ -1,9 +1,10 @@
-package professor;
+import professor.GerenciadorUsuario;
+import professor.Usuario;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class MainProfessor {
+public class TesteUsuarioProfessor {
 
     public static void main(String[] args) {
 
