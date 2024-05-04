@@ -73,7 +73,6 @@ public class GerenciadorCarro {
         Carro carroParaAtualizar = obterCarroPorPlaca(placa);
         if(carroParaAtualizar != null) {
             carroParaAtualizar.setModelo(novoModelo);
-            carroParaAtualizar.setModelo("Sem cor");
         }
 
     }
