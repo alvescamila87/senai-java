@@ -1,5 +1,7 @@
-import model.ex01.GerenciadorUsuario;
-import model.ex01.Usuario;
+package model.ex01usuario;
+
+import model.ex01usuario.GerenciadorUsuario;
+import model.ex01usuario.Usuario;
 
 import java.util.Scanner;
 

@@ -1,3 +1,5 @@
+package professor;
+
 import professor.GerenciadorUsuario;
 import professor.Usuario;
 
@@ -33,6 +35,7 @@ public class TesteUsuarioProfessor {
 
                     String email = entrada.nextLine();
                     System.out.println("e-mail: ");
+                    entrada.nextLine();
 
                     Usuario novoUsuario = new Usuario(id, nome, email);
 
@@ -60,6 +63,7 @@ public class TesteUsuarioProfessor {
 
                     String novoEmail = entrada.nextLine();
                     System.out.println("Novo e-mail: ");
+                    entrada.nextLine();
 
                     guProfessor.atualizarUsuario(idParaAtualizar, novoNome, novoEmail);
 

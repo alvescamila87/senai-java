@@ -1,9 +1,14 @@
-import model.ex02.Carro;
-import model.ex02.GerenciadorCarro;
+package model.ex02carro;
+
+import model.ex02carro.Carro;
+import model.ex02carro.GerenciadorCarro;
 
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Esta classe contém o método main para testar o gerenciamento de carros.
+ */
 public class TesteCarro {
 
     public static void main(String[] args) {
@@ -42,6 +47,7 @@ public class TesteCarro {
 
                     System.out.println("Ano de fabricação (AAAA): ");
                     int ano = entrada.nextInt();
+                    entrada.nextLine();
 
                     Carro novoCarro = new Carro(placa, modelo, cor, ano);
 
@@ -69,9 +75,9 @@ public class TesteCarro {
 
                     System.out.println("Nova cor do carro: ");
                     String novaCorParaAtualizar = entrada.nextLine();
+                    entrada.nextLine();
 
                     gerenciadorCarro.atualizarCarro(placaParaAtualziar, novoModeloParaAtualizar, novaCorParaAtualizar);
-
                     break;
                 case 4:
                     System.out.println("REMOVER VEÍCULO");

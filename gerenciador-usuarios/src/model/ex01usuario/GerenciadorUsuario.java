@@ -1,4 +1,4 @@
-package model.ex01;
+package model.ex01usuario;
 
 import java.util.ArrayList;
 import java.util.List;
