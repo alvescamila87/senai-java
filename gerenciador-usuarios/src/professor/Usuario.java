@@ -42,10 +42,10 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuário ["
-                + "ID: " + id
-                + " Nome: " + nome
-                + " E-mail: " + email + "]";
+        return "Usuario{" +
+                "id='" + id + '\'' +
+                ", nome='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
-
 }

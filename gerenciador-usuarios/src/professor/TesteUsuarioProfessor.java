@@ -27,15 +27,15 @@ public class TesteUsuarioProfessor {
 
             switch (opcao){
                 case 1:
+                    System.out.println("ID: ");
                     String id = entrada.nextLine();
-                    System.out.println("id: ");
 
-                    String nome = entrada.nextLine();
                     System.out.println("Nome: ");
+                    String nome = entrada.nextLine();
 
-                    String email = entrada.nextLine();
                     System.out.println("e-mail: ");
-                    entrada.nextLine();
+                    String email = entrada.nextLine();
+
 
                     Usuario novoUsuario = new Usuario(id, nome, email);
 
@@ -55,24 +55,24 @@ public class TesteUsuarioProfessor {
                     }*/
                     break;
                 case 3:
+
+                    System.out.println("ID para atualizar: ");
                     String idParaAtualizar = entrada.nextLine();
-                    System.out.println("id para atualizar: ");
 
-                    String novoNome = entrada.nextLine();
                     System.out.println("Novo Nome: ");
+                    String novoNome = entrada.nextLine();
 
-                    String novoEmail = entrada.nextLine();
                     System.out.println("Novo e-mail: ");
-                    entrada.nextLine();
+                    String novoEmail = entrada.nextLine();
 
                     guProfessor.atualizarUsuario(idParaAtualizar, novoNome, novoEmail);
 
                     break;
                 case 4:
-                    System.out.println("Remover usuário: ");
-                    System.out.print("ID do usuário para remove");
+                    System.out.println ("REMOVER USUÁRIO");
+                    System.out.print("ID do usuário para remover: ");
                     String idParaRemover = entrada.nextLine();
-                    guProfessor.removerUsuario(idParaRemover);
+                    guProfessor.removerUsuario2(idParaRemover);
                     break;
                 case 5:
                     System.out.println("Sai do programa");

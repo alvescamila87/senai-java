@@ -69,7 +69,7 @@ public class GerenciadorCarro {
      * @param placa A placa do carro a ser atualizado.
      * @param novoModelo O novo modelo do carro.
      */
-    public void atualizarCarro(String placa, String novoModelo){
+    public void atualizarCarroModelo(String placa, String novoModelo){
         Carro carroParaAtualizar = obterCarroPorPlaca(placa);
         if(carroParaAtualizar != null) {
             carroParaAtualizar.setModelo(novoModelo);
@@ -98,7 +98,7 @@ public class GerenciadorCarro {
     public int removerCarro(String placa){
         for(Carro c : listaDeCarros) {
             if(c.getPlaca().equals(placa)) {
-                listaDeCarros.remove(placa);
+                listaDeCarros.remove(c);
                 return 1;
             }
         }

@@ -75,7 +75,6 @@ public class TesteCarro {
 
                     System.out.println("Nova cor do carro: ");
                     String novaCorParaAtualizar = entrada.nextLine();
-                    entrada.nextLine();
 
                     gerenciadorCarro.atualizarCarro(placaParaAtualziar, novoModeloParaAtualizar, novaCorParaAtualizar);
                     break;

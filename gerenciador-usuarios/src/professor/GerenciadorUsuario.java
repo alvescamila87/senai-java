@@ -60,10 +60,10 @@ public class GerenciadorUsuario {
     }
 
     // modo 2: fazer igual
-    private boolean removerUsuario2(String id){
+    public boolean removerUsuario2(String id){
         for (Usuario u : listaDeUsuarios) {
-            if(u.getId().equals(id)){
-                listaDeUsuarios.remove(id);
+            if(id.equals(u.getId())){
+                listaDeUsuarios.remove(u); // remove o usuário pelo objeto 'u'
                 return true;
             }
         }

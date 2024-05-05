@@ -1,12 +1,13 @@
 package model.ex03livro;
 
+import java.util.List;
 import java.util.Scanner;
 public class TesteLivro {
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
 
-        GerenciadorLivro gl = new GerenciadorLivro();
+        GerenciadorLivro gerenciadorLivro = new GerenciadorLivro();
 
         while(true){
 
@@ -39,7 +40,7 @@ public class TesteLivro {
                     entrada.nextLine();
 
                     Livro livroNovo = new Livro(isbnEntrada, tituloEntrada, autorEntrada, anoLivro);
-                    if(!gl.adicionarLivro(livroNovo)) {
+                    if(!gerenciadorLivro.adicionarLivro(livroNovo)) {
                         System.out.println("[ERRO] Já existe livro cadastrado com esse ISBN: " + isbnEntrada);
                     } else {
                         System.out.println("Livro cadastrado com sucesso!");
@@ -47,10 +48,34 @@ public class TesteLivro {
 
                     break;
                 case 2:
+                    System.out.println("LISTA DE LIVROS CADASTRADOS");
+                    System.out.println("------------------------------------------");
+
+                    List<Livro> listaDeLivrosCadastrados = gerenciadorLivro.listarLivros();
+
+                    for (Livro livro : listaDeLivrosCadastrados) {
+                        System.out.println(livro);
+                    }
+
                     break;
                 case 3:
+                    System.out.println("Informe o ISBN do livro a ser atualizado: ");
+                    String isnbParaAtualizar = entrada.nextLine();
+
+                    System.out.println("Titulo de atualização: ");
+                    String tituloParaAtualizar = entrada.nextLine();
+
+                    System.out.println("Autor de atualização: ");
+                    String autorParaAtualizar = entrada.nextLine();
+
+                    gerenciadorLivro.atualizarLivro(isnbParaAtualizar, tituloParaAtualizar, autorParaAtualizar);
+
                     break;
                 case 4:
+                    System.out.println("Informe o ISBN do livro a ser excluído: ");
+                    String isnbParaExcluir = entrada.nextLine();
+
+                    gerenciadorLivro.removerLivro(isnbParaExcluir);
                     break;
                 case 5:
                     System.out.println("FIM DO PROGRAMADA!");

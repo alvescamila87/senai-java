@@ -20,5 +20,50 @@ public class GerenciadorLivro {
         return true;
     }
 
+    public List<Livro> listarLivros(){
+        return listaDeLivros;
+    }
+
+    protected Livro obterLivroPorISBN(String ISBN){
+        for (Livro l : listaDeLivros) {
+            if(ISBN.equals(l.getISBN())) {
+                return l;
+            }
+        }
+        return null;
+    }
+
+    public void atualizarLivro(String ISBN, String titulo, String autor){
+        Livro livroParaAtualizar = obterLivroPorISBN(ISBN);
+        if(livroParaAtualizar != null) {
+            livroParaAtualizar.setTitulo(titulo);
+            livroParaAtualizar.setAutor(autor);
+        }
+    }
+
+    public void atualizarLivro(String ISBN, String titulo){
+        Livro livroParaAtualizar = obterLivroPorISBN(ISBN);
+        if(livroParaAtualizar != null) {
+            livroParaAtualizar.setTitulo(titulo);
+        }
+    }
+
+    public void atualizarLivroAutor(String ISBN, String autor){
+        Livro livroParaAtualizar = obterLivroPorISBN(ISBN);
+        if(livroParaAtualizar != null) {
+            livroParaAtualizar.setAutor(autor);
+        }
+    }
+
+    public boolean removerLivro(String ISBN){
+        for(Livro l : listaDeLivros) {
+            if(ISBN.equals(l.getISBN())) {
+                listaDeLivros.remove(l);
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 }
