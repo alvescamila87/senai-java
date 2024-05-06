@@ -62,13 +62,60 @@ public class TesteLivro {
                     System.out.println("Informe o ISBN do livro a ser atualizado: ");
                     String isnbParaAtualizar = entrada.nextLine();
 
-                    System.out.println("Titulo de atualização: ");
-                    String tituloParaAtualizar = entrada.nextLine();
+                    int opcaoAtualização = 0;
 
-                    System.out.println("Autor de atualização: ");
-                    String autorParaAtualizar = entrada.nextLine();
+                    while (opcaoAtualização != 4) {
 
-                    gerenciadorLivro.atualizarLivro(isnbParaAtualizar, tituloParaAtualizar, autorParaAtualizar);
+                        System.out.println("""
+                                [1] Atualiza todas as informações de livro
+                                [2] Atualiza somente título
+                                [3] Atualiza somente autor
+                                [4] Atualiza somente titulo e autor
+                                [5] Sair e retornar ao menu principal
+                                """);
+
+                        switch (opcaoAtualização) {
+                            case 1:
+                                System.out.println("Novo titulo: ");
+                                String tituloParaAtualizar = entrada.nextLine();
+
+                                System.out.println("Novo autor: ");
+                                String autorParaAtualizar = entrada.nextLine();
+
+                                System.out.println("Novo ano de publicação: ");
+                                int anoParaAtualizar = entrada.nextInt();
+
+                                gerenciadorLivro.atualizarLivro(isnbParaAtualizar, tituloParaAtualizar, autorParaAtualizar, anoParaAtualizar);
+
+                                break;
+                            case 2:
+                                System.out.println("Novo titulo: ");
+                                tituloParaAtualizar = entrada.nextLine();
+
+                                gerenciadorLivro.atualizarLivro(isnbParaAtualizar, tituloParaAtualizar);
+                                break;
+                            case 3:
+                                System.out.println("Novo autor: ");
+                                autorParaAtualizar = entrada.nextLine();
+
+                                gerenciadorLivro.atualizarLivroAutor(isnbParaAtualizar, autorParaAtualizar);
+                                break;
+                            case 4:
+                                System.out.println("Novo titulo: ");
+                                tituloParaAtualizar = entrada.nextLine();
+
+                                System.out.println("Novo autor: ");
+                                autorParaAtualizar = entrada.nextLine();
+
+                                gerenciadorLivro.atualizarLivro(isnbParaAtualizar, tituloParaAtualizar, autorParaAtualizar);
+                                break;
+                            case 5:
+                                System.out.println("Retornando ao menu principal...");
+                                break;
+                            default:
+                                System.out.println("ERRO: Opção inválida, tente novamente... ");
+                        }
+                    }
 
                     break;
                 case 4:

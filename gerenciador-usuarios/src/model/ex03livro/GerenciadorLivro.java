@@ -33,6 +33,14 @@ public class GerenciadorLivro {
         return null;
     }
 
+    public void atualizarLivro(String ISBN, String titulo, String autor, int anoPublicacao){
+        Livro livroParaAtualizar = obterLivroPorISBN(ISBN);
+        if(livroParaAtualizar != null) {
+            livroParaAtualizar.setTitulo(titulo);
+            livroParaAtualizar.setAutor(autor);
+            livroParaAtualizar.setAnoDePublicacao(anoPublicacao);
+        }
+    }
     public void atualizarLivro(String ISBN, String titulo, String autor){
         Livro livroParaAtualizar = obterLivroPorISBN(ISBN);
         if(livroParaAtualizar != null) {

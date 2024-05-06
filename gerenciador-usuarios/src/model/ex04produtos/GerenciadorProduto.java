@@ -1,4 +1,4 @@
-package model.e04produtos;
+package model.ex04produtos;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +29,14 @@ public class GerenciadorProduto {
         return null;
     }
 
+    public void atualizarProduto(String codigo, String nome, String categoria, double preco){
+        Produto produtoAtualizar = listarProdutoPorCodigo(codigo);
+        if(produtoAtualizar != null) {
+            produtoAtualizar.setCategoria(nome);
+            produtoAtualizar.setCategoria(categoria);
+            produtoAtualizar.setPreco(preco);
+        }
+    }
     public void atualizarProduto(String codigo, String categoria, double preco){
         Produto produtoAtualizar = listarProdutoPorCodigo(codigo);
         if(produtoAtualizar != null) {

@@ -1,4 +1,4 @@
-package model.e04produtos;
+package model.ex04produtos;
 
 public class Produto {
 

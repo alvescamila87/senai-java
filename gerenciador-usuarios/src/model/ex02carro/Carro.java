@@ -60,7 +60,7 @@ public class Carro {
         this.anoDeFabricacao = anoDeFabricacao;
     }
 
-    public int getIdadeCarro() {
+    public int calcularIdadeCarro() {
         int anoAtual = 2024;
         int idadeVeiculo = anoAtual - anoDeFabricacao;
         return idadeVeiculo;
@@ -77,7 +77,7 @@ public class Carro {
                 ", modelo ='" + modelo + '\'' +
                 ", cor ='" + cor + '\'' +
                 ", ano de fabricação = '" + anoDeFabricacao + '\'' +
-                ", tempo de uso = '" + getIdadeCarro() + '\'' + " anos" +
+                ", tempo de uso = '" + calcularIdadeCarro() + '\'' + " anos" +
                 '}';
     }
 }
