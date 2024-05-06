@@ -37,6 +37,7 @@ public class TesteProduto {
 
                     System.out.println("Preço do produto: ");
                     double preco = entrada.nextDouble();
+                    entrada.nextLine();
 
                     Produto produtoNovo = new Produto(codigo, nome, categoria, preco);
 
@@ -100,6 +101,7 @@ public class TesteProduto {
                             case 3:
                                 System.out.println("Novo preço do produto: ");
                                 precoParaAtualizar = entrada.nextDouble();
+                                entrada.nextLine();
 
                                 gerenciadorProduto.atualizarProduto(codigoParaAtualizar, precoParaAtualizar);
                                 break;
