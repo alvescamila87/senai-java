@@ -36,4 +36,41 @@ public class GerenciadorDeLivros {
         }
     }
 
+    /**
+     * Retorna todos os livros dentro da lista de livros.
+     * @return listaDeLivros a ser retornada.
+     */
+    public List<Livro> listarTodosivros1(){
+        if(listaDeLivros.isEmpty()) {
+            System.out.println("Não há livros cadastrados");
+            return listaDeLivros;
+        }
+        return listaDeLivros;
+    }
+
+    public void listarTodosLivros2(){
+        if(listaDeLivros.isEmpty()) {
+            System.out.println("Não há livros cadastrados");
+        }
+        listaDeLivros.forEach(System.out::println);
+    }
+
+    public void listarTodosLivros3(){
+        if(listaDeLivros.isEmpty()){
+            System.out.println("Não há livros cadastrados");
+        }
+        for(Livro livro : listaDeLivros){
+            System.out.println(livro);
+        }
+    }
+
+    public void listarTodosLivros4(){
+        if(listaDeLivros.isEmpty()) {
+            System.out.println("Não há livros cadastrados");
+        }
+        for (int i = 0; i < listaDeLivros.size(); i++) {
+            System.out.println(listaDeLivros.get(i));
+        }
+    }
+
 }
