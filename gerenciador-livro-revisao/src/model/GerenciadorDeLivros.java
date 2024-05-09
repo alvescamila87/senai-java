@@ -73,4 +73,74 @@ public class GerenciadorDeLivros {
         }
     }
 
+    /**
+     * Método responsável por retornar um livro. A lista de livros é iterada e o
+     * método .equals da classe String é utilizada para comparar o ISBN fornecido com o .getISBN de
+     * cada livr dentro da lista. Se não houver com o ISBN correspondete, retorna null.
+     * Deve ser tratado onde for usado.
+     * @param ISBN que está sendo buscado
+     * @return livro que tem o ISBN igual ao buscado
+     */
+    private Livro listarLivroPorISBN(String ISBN){
+        for (Livro livro : listaDeLivros) {
+            if(ISBN.equals(livro.getISBN())){
+                return livro;
+            }
+        }
+        System.out.println("Livro não encontrado.");
+        return null;
+    }
+
+    /**
+     * Método responsável por atualizar todos os parâmetros de um livro.
+     *
+     * @param ISBN
+     * @param titulo
+     * @param autor
+     * @param anoDePublicao
+     */
+    public void atualizarLivro(String ISBN, String titulo, String autor, int anoDePublicao){
+        Livro livroParaAtualizar = listarLivroPorISBN(ISBN);
+        if(livroParaAtualizar == null) {
+            System.out.println("Esse livro não foi cadastrado.");
+        } else {
+            livroParaAtualizar.setTitulo(titulo);
+            livroParaAtualizar.setAutor(autor);
+            livroParaAtualizar.setAnoDePublicacao(anoDePublicao);
+            System.out.println("Livro atualizado com sucesso!");
+        }
+
+    }
+
+    /**
+     *
+     * @param ISBN
+     */
+    public void removerLivro1(String ISBN) {
+        Livro livroParaRemover = listarLivroPorISBN(ISBN);
+        if(livroParaRemover == null) {
+            System.out.println("Este livro não está cadastrado.");
+        } else {
+            listaDeLivros.remove(livroParaRemover);
+            System.out.println("Livro removido com sucesso.");
+        }
+    }
+
+    /**
+     * Método reponsável por remover um livro da lista. É utilizdo um predicado (lambda),
+     * o método .removeIf(), para comparar o ISBN informado com todos os livros da lista e remover se encontrado.
+     * Caso não seja encontrado, uma mensagem é exibida para o usuário.
+     * @param ISBN identificador para ser utilizado no método de
+     */
+
+    public void removerLivro2(String ISBN){
+        boolean livroParaRemover = listaDeLivros.removeIf(livro -> livro.getISBN().equals(ISBN));
+
+        if(livroParaRemover) {
+            System.out.println("Livro removido com sucesso!");
+        } else {
+            System.out.println("Livro com ISBN " + ISBN + " não encontrado!");
+        }
+    }
+
 }
