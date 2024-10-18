@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    static String turma[] = new String[50];
-    static int votos[] = new int[50];
+
     static int votosChapa1 = 0;
     static int votosChapa2 = 0;
     static int votosChapa3 = 0;
@@ -16,6 +15,8 @@ public class Main {
     static int votosNulo = 0;
     static int votosInvalidos = 0;
 
+    static int totalVotos = 0;
+
 
     // quantidade de votos: total de eleitores
     /* para quem votou:
@@ -23,20 +24,12 @@ public class Main {
         - votos nulos
         - em branco
 
-        opção 1
-        - array de votos em branco
-        - array de votos nulos
-        - array de votos válidos
-
-        opção 2:
-        - usar um único array para computar
-
      */
 
 
     public static void menu(Scanner entrada, int opcaoMenu) {
-        int opcaoMenu1 = 1;
-        int opcaoVoto = -1;
+        int opcaoMenu1 = -1;
+        int opcaoVoto = 0;
 
         while(true) {
 
@@ -99,34 +92,42 @@ public class Main {
                 case 0:
                     System.out.println("Voto NULO");
                     votosNulo++;
+                    totalVotos++;
                     return;
                 case 1:
                     System.out.println("Voto Ana");
                     votosChapa1++;
+                    totalVotos++;
                     return;
                 case 2:
                     System.out.println("Voto Pedro");
                     votosChapa2++;
+                    totalVotos++;
                     return;
                 case 3:
                     System.out.println("Voto Rita");
                     votosChapa3++;
+                    totalVotos++;
                     return;
                 case 4:
                     System.out.println("Voto Alfredo");
                     votosChapa4++;
+                    totalVotos++;
                     return;
                 case 5:
                     System.out.println("Voto Regina");
                     votosChapa5++;
+                    totalVotos++;
                     return;
                 case 6:
                     System.out.println("Voto Ricardo");
                     votosChapa6++;
+                    totalVotos++;
                     return;
                 case 10:
                     System.out.println("Voto BRANCO");
                     votosEmBranco++;
+                    totalVotos++;
                     return;
                 case 11:
                     System.out.println("Retornando ao menu principal");
@@ -149,6 +150,7 @@ public class Main {
         System.out.println("Total de votos [EM BRANCO]: " + votosEmBranco);
         System.out.println("Total de votos [NULO]: " + votosNulo);
         System.out.println("Total de votos [INVÁLIDO]: " + votosInvalidos);
+        System.out.println("Total de votos [GERAL]: " + totalVotos);
     }
     public static void main(String[] args) {
 
