@@ -16,16 +16,10 @@ public class Main {
     static int votosInvalidos = 0;
 
     static int totalVotos = 0;
-
-
-    // quantidade de votos: total de eleitores
-    /* para quem votou:
-        - votos válidos (saber a chapa)
-        - votos nulos
-        - em branco
-
-     */
-
+//    static int totalVotosValidos = totalVotos - (votosEmBranco + votosNulo);
+//    static double percentualValidos = ((double) (totalVotosValidos / totalVotos) * 100);
+//    static double percentualEmBranco = ((double) (votosEmBranco / totalVotos) * 100);
+//    static double percentualNulos = ((double) (votosNulo / totalVotos) * 100);
 
     public static void menu(Scanner entrada, int opcaoMenu) {
         int opcaoMenu1 = -1;
@@ -151,6 +145,16 @@ public class Main {
         System.out.println("Total de votos [NULO]: " + votosNulo);
         System.out.println("Total de votos [INVÁLIDO]: " + votosInvalidos);
         System.out.println("Total de votos [GERAL]: " + totalVotos);
+        System.out.println("");
+        System.out.println("---------- TOTAL GERAL ----------");
+        System.out.println("Total de eleitores: " + totalVotos);
+        System.out.printf("Total de votos válidos: %s \n", (totalVotos - (votosEmBranco + votosNulo)));
+        System.out.println("\nTotal de votos nulos: " + votosNulo);
+        System.out.println("Total de votos em branco: " + votosEmBranco);
+        System.out.println("---------- PERCENTUAIS ----------");
+        System.out.printf("Percentual de votos: válidos %s %%\n", ((totalVotos - (votosEmBranco + votosNulo)) / totalVotos) * 100);
+        System.out.printf("Percentual de votos: brancos %s %%\n", (votosEmBranco / totalVotos) * 100);
+        System.out.printf("Percentual de votos: nulos %s %%\n", ((votosNulo / totalVotos) * 100));
     }
     public static void main(String[] args) {
 
