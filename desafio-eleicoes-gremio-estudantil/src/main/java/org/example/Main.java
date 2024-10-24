@@ -5,21 +5,17 @@ import java.util.Scanner;
 public class Main {
 
 
-    static int votosChapa1 = 0;
-    static int votosChapa2 = 0;
-    static int votosChapa3 = 0;
-    static int votosChapa4 = 0;
-    static int votosChapa5 = 0;
-    static int votosChapa6 = 0;
-    static int votosEmBranco = 0;
-    static int votosNulo = 0;
-    static int votosInvalidos = 0;
+    static double votosChapa1 = 0;
+    static double votosChapa2 = 0;
+    static double votosChapa3 = 0;
+    static double votosChapa4 = 0;
+    static double votosChapa5 = 0;
+    static double votosChapa6 = 0;
+    static double votosEmBranco = 0;
+    static double votosNulo = 0;
+    static double votosInvalidos = 0;
+    static double totalVotos = 0;
 
-    static int totalVotos = 0;
-//    static int totalVotosValidos = totalVotos - (votosEmBranco + votosNulo);
-//    static double percentualValidos = ((double) (totalVotosValidos / totalVotos) * 100);
-//    static double percentualEmBranco = ((double) (votosEmBranco / totalVotos) * 100);
-//    static double percentualNulos = ((double) (votosNulo / totalVotos) * 100);
 
     public static void menu(Scanner entrada, int opcaoMenu) {
         int opcaoMenu1 = -1;
@@ -148,13 +144,20 @@ public class Main {
         System.out.println("");
         System.out.println("---------- TOTAL GERAL ----------");
         System.out.println("Total de eleitores: " + totalVotos);
-        System.out.printf("Total de votos válidos: %s \n", (totalVotos - (votosEmBranco + votosNulo)));
+        double totalVotosValidos = totalVotos - (votosEmBranco + votosNulo);
+        System.out.printf("Total de votos válidos: %s \n", totalVotosValidos);
         System.out.println("\nTotal de votos nulos: " + votosNulo);
         System.out.println("Total de votos em branco: " + votosEmBranco);
+        System.out.println("");
         System.out.println("---------- PERCENTUAIS ----------");
-        System.out.printf("Percentual de votos: válidos %s %%\n", ((totalVotos - (votosEmBranco + votosNulo)) / totalVotos) * 100);
-        System.out.printf("Percentual de votos: brancos %s %%\n", (votosEmBranco / totalVotos) * 100);
-        System.out.printf("Percentual de votos: nulos %s %%\n", ((votosNulo / totalVotos) * 100));
+        double percentualValidos = (double) (totalVotosValidos / totalVotos) * 100;
+        System.out.printf("Percentual de votos: válidos %s %%\n", percentualValidos);
+        double percentualEmBranco = (double) (votosNulo / totalVotos) * 100;
+        System.out.printf("Percentual de votos: brancos %s %%\n", percentualEmBranco);
+        double percentualNulos = (double) (votosNulo / totalVotos) * 100;
+        System.out.printf("Percentual de votos: nulos %s %%\n", percentualNulos);
+        System.out.println("");
+
     }
     public static void main(String[] args) {
 
